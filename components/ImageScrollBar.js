@@ -14,7 +14,7 @@ const LeftArrow = () => {
 				as={FaArrowAltCircleLeft}
 				onClick={() => scrollPrev()}
 				fontSize="2xl"
-				cursos="pointer"
+				cursor="pointer"
 			/>
 		</Flex>
 
@@ -29,7 +29,7 @@ const RightArrow = () => {
 				as={FaArrowAltCircleRight}
 				onClick={() => scrollNext()}
 				fontSize="2xl"
-				cursos="pointer"
+				cursor="pointer"
 			/>
 		</Flex>
 
@@ -45,6 +45,7 @@ const ImageScrollBar = ({ data }) => (
 			width='910px'
 			itemId={item.id}
 			overflow='hidden' p='1'
+			key={item.id}
 		>
           <Image
 			placeholder="blur"
