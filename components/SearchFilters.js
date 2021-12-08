@@ -31,10 +31,10 @@ export default function SearchFilters() {
 
 
   return (
-    <Flex bg='gray.100' p='4' justifyContent='center' flexWrap='wrap'>
+    <Flex bg='gray.100' p='4' justifyContent='center' flexWrap='wrap' borderBottom="1px solid black" bg="transparent">
       {filters?.map((filter) => (
         <Box key={filter.queryName}>
-          <Select onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })} placeholder={filter.placeholder} w='fit-content' p='2' >
+          <Select onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })} placeholder={filter.placeholder} w='fit-content' p='2' bg="white" >
             {filter?.items?.map((item) => (
               <option value={item.value} key={item.value}>
                 {item.name}

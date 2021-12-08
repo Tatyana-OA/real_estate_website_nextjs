@@ -14,3 +14,19 @@ a {
 * {
   box-sizing: border-box;
 }
+.chakra-ui-light {
+	background-color:#ffc92824;
+}
+.css-ade5x {
+	color: white;
+    background-color: #6a46c0!important;
+}
+
+.css-18xojmf {
+	color:purple!important;
+}
+
+.chakra-button svg {
+	background-color: white!important;
+}
+

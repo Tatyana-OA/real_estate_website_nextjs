@@ -9,7 +9,7 @@ const Layout = ({ children }) => (
       <title>N-R.JS Real Estate by Tanya</title>
     </Head>
     <Box maxWidth="1280px" m="auto">
-      <header>
+      <header style={{borderBottom:"2px solid black"}}>
 		  <NavBar/>
 	   </header>
       <main>

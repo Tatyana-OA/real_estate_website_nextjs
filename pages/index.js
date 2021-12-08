@@ -12,12 +12,12 @@ const Banner = ({purpose, title1, title2, desc1, desc2, buttonText, linkName, im
 			<Text color="gray.500" fontSize="sm" fontWeight="medium">{purpose}</Text>
 			<Text  fontSize="3xl" fontWeight="bold">{title1}<br /> {title2}</Text>
 			<Text color="gray.700" fontSize="lg" fontWeight="medium" paddingTop="3" paddingBottom="3" >{desc1}<br /> {desc2}</Text>
-			<Button fontSize="xl">
+			<Button fontSize="xl" bg="#6a46c0"color="white">
 				<Link href={linkName}>{buttonText}</Link>
 			</Button>
 		</Box>
 	</Flex>
-)
+) 
 
 export default function Home({propertiesForSale, propertiesForRent}) {
 	//console.log(propertiesForRent,propertiesForSale)
@@ -47,6 +47,7 @@ export default function Home({propertiesForSale, propertiesForRent}) {
         buttonText="Explore Buying"
         linkName="/search?purpose=for-sale"
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008"
+
       />
 	  	  <Flex flexWrap="wrap">
 			{propertiesForSale.map((property)=> <Property property={property} key={property.id} />)}
