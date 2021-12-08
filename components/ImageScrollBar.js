@@ -37,9 +37,23 @@ const RightArrow = () => {
 	)
 }
 
-
-const ImageScrollBar = () => (
+// Passing images from details page
+const ImageScrollBar = ({ data }) => (
 	<ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} style={{overflow: 'hidden'}}>
-
+		{data.map((image) => {
+			<Box key={image.id} width="910px" imageId={image.id} overflow="hidden" p="1">
+				<Image
+					placeholder="blur"
+					blurDataUrl={image.url}
+					src={image.url}
+					height={500}
+					width={1000}
+					alt="property"
+					sizes="(max-width:500px) 100px, (max-width: 1023px) 400px, 1000px"
+				/>
+			</Box>
+		})}
 	</ScrollMenu>
 )
+
+export default ImageScrollBar;
