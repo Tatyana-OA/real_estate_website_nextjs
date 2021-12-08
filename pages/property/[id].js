@@ -4,24 +4,23 @@ import { BsGridFill } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
 import millify from 'millify'; // making price readable
 
-import { baseUrl, FetchApi } from '../../utils/fetchApi';
+import { baseUrl, fetchApi } from '../../utils/fetchApi';
+import ImageScrollBar from '../../components/ImageScrollBar';
 
-const PropertyDetails = ( { price, rentFrequency, rooms, title, baths, area, agency, isVerified, description, type, purpose, furnishingStatus, amenities, photos} ) => (
+const PropertyDetails = ( { propertyDetails : { price, rentFrequency, rooms, title, baths, area, agency, isVerified, description, type, purpose, furnishingStatus, amenities, photos} } ) => (
 	<Box maxWidth="1000px" margin="auto" p="4">
 		{photos && <ImageScrollBar data={photos} />}
-
 	</Box>
 )
 
 export default PropertyDetails;
 
-export async function getServerSideProps({params: {id}}) {
-	const data = await fetichApi(`${baseUrl}/properties/detail?/externalId=${id}`)
-
+export async function getServerSideProps({ params: { id } }) {
+	const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`);
 
 	return {
-		props: {
-			propertyDetails: data
-		}
-	}
-}
+	  props: {
+		propertyDetails: data,
+	  },
+	};
+  }
