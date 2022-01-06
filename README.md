@@ -1,4 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+With rental homes and for-sale properties, advanced property filtering, property details page with an image carousel, and much more, Realtor is the best Real Estate App that you can currently find on YouTube.
 
 ## Getting Started
 
